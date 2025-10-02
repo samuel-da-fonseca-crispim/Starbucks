@@ -1,0 +1,386 @@
+       :root {
+           /* Cores Sugeridas */
+           --cor-principal: #A03030;
+           /* Vermelho Tijolo/Borgonha */
+           --cor-secundaria: #F5F5DC;
+           /* Bege Claro/Creme */
+           --cor-cta: #FFC300;
+           /* Amarelo Vibrante */
+           --cor-texto: #333333;
+           --cor-fundo: #FFFFFF;
+           --cor-verde: #4B774B;
+
+           /* Fontes */
+           --fonte-titulo: 'Playfair Display', serif;
+           --fonte-corpo: 'Roboto', sans-serif;
+       }
+
+       /* RESET BÁSICO */
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       body {
+           font-family: var(--fonte-corpo);
+           color: var(--cor-texto);
+           line-height: 1.6;
+           background-color: var(--cor-fundo);
+       }
+
+       h1,
+       h2,
+       h3 {
+           font-family: var(--fonte-titulo);
+           color: var(--cor-principal);
+       }
+
+       .container {
+           width: 90%;
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 40px 0;
+       }
+
+       /* BARRA DE NAVEGAÇÃO/HEADER FIXA */
+       .navbar {
+           background-color: var(--cor-principal);
+           padding: 10px 0;
+           position: fixed;
+           width: 100%;
+           top: 0;
+           z-index: 1000;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+
+       .navbar .container {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 5%;
+       }
+
+       .logo img {
+           height: 90px;
+           /* AUMENTADO NOVAMENTE */
+           width: auto;
+           /* Permite que o width se ajuste proporcionalmente */
+           filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+       }
+
+       /* NOVO ESTILO: Lista de links de navegação */
+       .nav-links {
+           list-style: none;
+           display: flex;
+           gap: 25px;
+       }
+
+       .nav-links li a {
+           color: var(--cor-secundaria);
+           text-decoration: none;
+           font-weight: 700;
+           font-size: 1rem;
+           padding: 5px 10px;
+           border-radius: 4px;
+           transition: background-color 0.3s;
+       }
+
+       .nav-links li a:hover {
+           background-color: rgba(255, 255, 255, 0.1);
+           color: var(--cor-cta);
+       }
+
+       /* Estilo para o CTA (Call-to-Action) na navegação */
+       .cta-nav {
+           background-color: var(--cor-cta);
+           color: var(--cor-principal) !important;
+           padding: 5px 15px !important;
+           border-radius: 5px;
+           transition: background-color 0.3s, transform 0.2s;
+           border: 2px solid var(--cor-cta);
+       }
+
+       .cta-nav:hover {
+           background-color: #FFD64D;
+           transform: translateY(-1px);
+       }
+
+       /* BOTÕES (CTAs) */
+       .cta-button {
+           display: inline-block;
+           background-color: var(--cor-cta);
+           color: var(--cor-principal);
+           padding: 15px 30px;
+           border-radius: 5px;
+           text-decoration: none;
+           font-weight: 700;
+           font-size: 1.25rem;
+           text-transform: uppercase;
+           transition: background-color 0.3s ease, transform 0.2s;
+           border: 2px solid var(--cor-cta);
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       }
+
+       .cta-button:hover {
+           background-color: #FFD64D;
+           transform: translateY(-2px);
+           box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+       }
+
+       /* HERO SECTION */
+       #hero {
+           background-color: var(--cor-principal);
+           color: var(--cor-secundaria);
+           padding: 120px 0 80px 0;
+           text-align: center;
+           background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('placeholder-hero-pizza.jpg');
+           background-size: cover;
+           background-position: center;
+           min-height: 600px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+
+       #hero h1 {
+           margin-bottom: 20px;
+       }
+
+       #hero p {
+           max-width: 800px;
+           margin: 0 auto 20px auto;
+           font-size: 1.3rem;
+           color: var(--cor-secundaria);
+       }
+
+       /* --- Estilos Mantidos --- */
+       section {
+           padding: 60px 0;
+           text-align: center;
+       }
+
+       section:nth-child(even) {
+           background-color: var(--cor-secundaria);
+       }
+
+       .section-title {
+           font-size: 2.5rem;
+           margin-bottom: 40px;
+           color: var(--cor-principal);
+       }
+
+       #sobre p {
+           max-width: 700px;
+           margin: 0 auto 20px;
+           font-size: 1.1rem;
+       }
+
+       #sobre .localizacao {
+           font-weight: 700;
+           color: var(--cor-verde);
+           font-size: 1.2rem;
+           margin-top: 15px;
+       }
+
+       #beneficios ul {
+           list-style: none;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 30px;
+           max-width: 900px;
+           margin: 0 auto;
+       }
+
+       #beneficios li {
+           background-color: var(--cor-fundo);
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+           flex: 1 1 250px;
+           text-align: left;
+           font-weight: 700;
+           color: var(--cor-texto);
+           border-left: 5px solid var(--cor-verde);
+           font-size: 1.1rem;
+       }
+
+       #cardapio-destaque {
+           background-color: var(--cor-principal);
+           color: white;
+       }
+
+       #cardapio-destaque .section-title {
+           color: white;
+       }
+
+       .cardapio-lista {
+           display: flex;
+           justify-content: space-around;
+           gap: 20px;
+           margin-bottom: 40px;
+       }
+
+       .categoria {
+           flex: 1;
+           padding: 20px;
+           background-color: rgba(255, 255, 255, 0.1);
+           border-radius: 8px;
+           text-align: left;
+       }
+
+       .categoria h3 {
+           font-size: 1.5rem;
+           margin-bottom: 10px;
+           color: var(--cor-cta);
+       }
+
+       .categoria p {
+           font-size: 1rem;
+           margin-bottom: 10px;
+       }
+
+       .depoimento-grid {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 20px;
+       }
+
+       .depoimento-box {
+           background-color: var(--cor-fundo);
+           padding: 25px;
+           border-radius: 8px;
+           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+           flex: 1 1 300px;
+           text-align: center;
+           border-top: 5px solid var(--cor-principal);
+       }
+
+       .depoimento-box p {
+           font-style: italic;
+           margin-bottom: 10px;
+       }
+
+       .depoimento-box span {
+           display: block;
+           font-weight: 700;
+           color: var(--cor-principal);
+       }
+
+       #oferta {
+           padding: 60px 0;
+           background-color: var(--cor-secundaria);
+           border-top: 5px dashed var(--cor-principal);
+       }
+
+       #oferta h2 {
+           font-size: 2rem;
+           color: var(--cor-principal);
+           margin-bottom: 15px;
+       }
+
+       #oferta .desconto {
+           font-size: 2.5rem;
+           color: var(--cor-cta);
+           font-weight: 700;
+           margin-bottom: 30px;
+           animation: pulse 1.5s infinite;
+       }
+
+       @keyframes pulse {
+           0% {
+               transform: scale(1);
+           }
+
+           50% {
+               transform: scale(1.05);
+           }
+
+           100% {
+               transform: scale(1);
+           }
+       }
+
+       #oferta p {
+           margin-bottom: 30px;
+           font-size: 1.1rem;
+       }
+
+       /* FOOTER */
+       footer {
+           background-color: var(--cor-texto);
+           color: white;
+           padding: 30px 0;
+           text-align: center;
+           font-size: 0.9rem;
+       }
+
+       footer p {
+           margin: 5px 0;
+       }
+
+       footer strong {
+           color: var(--cor-cta);
+       }
+
+       /* RESPONSIVIDADE (MEDIA QUERIES) */
+       @media (max-width: 768px) {
+           .navbar .container {
+               justify-content: center;
+           }
+
+           .nav-links {
+               display: none;
+           }
+
+           #hero h1 {
+               font-size: 2.5rem;
+           }
+
+           #hero p {
+               font-size: 1.2rem;
+           }
+
+           .section-title {
+               font-size: 2rem;
+           }
+
+           .cardapio-lista {
+               flex-direction: column;
+           }
+
+           .depoimento-grid {
+               flex-direction: column;
+           }
+
+           .cta-button {
+               padding: 12px 20px;
+               font-size: 1.1rem;
+           }
+       }
+
+       @media (max-width: 480px) {
+           .container {
+               padding: 20px 0;
+           }
+
+           #hero {
+               min-height: 400px;
+           }
+
+           #hero h1 {
+               font-size: 2rem;
+           }
+
+           #hero p {
+               font-size: 1rem;
+           }
+
+           .logo img {
+               height: 100px;
+               /* Ajustado para mobile também, um pouco maior */
+               width: auto;
+           }
+       }
